@@ -678,7 +678,7 @@ class EventDetails extends StatelessWidget {
                                                       .eventInfo!
                                                       .vendorfollowTag ==
                                                   0
-                                              ? Colors.white
+                                              ? Colors.black
                                               : AppTheme.whiteBackgroundColor,
                                           fontWeight: FontWeight.w600),
                                     )),

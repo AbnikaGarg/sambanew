@@ -11,7 +11,7 @@ import '../models/VendorDetails.dart';
 import '../models/VendorListModel.dart';
 
 class HomepageController extends GetxController {
-  var tabIndex = 1;
+  var tabIndex = 0;
   final parameters = Get.parameters;
   void changeTabIndex(int index) {
     tabIndex = index;

@@ -1,5 +1,5 @@
 class AppUrls {
-  static const String appName = 'Samba';
+  static const String appName = 'TicketerRama';
   static const double appVersion = 1.0;
   static const String baseUrl = 'https://apifront.samba.events';
   static const String baseLoginUrl = "https://api.samba.events";

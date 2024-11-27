@@ -317,139 +317,139 @@ CarouselSliderController buttonCarouselController = CarouselSliderController();
                             SizedBox(
                               height: 10.h,
                             ),
-                            if (controller.bannerImages.isNotEmpty)
-                              Stack(
-                                children: [
-                                  CarouselSlider.builder(
-                                      itemCount: controller.bannerImages.length,
-                                      itemBuilder: (context, index, realIndex) {
-                                        return Stack(
-                                          children: <Widget>[
-                                            ShaderMask(
-                                              shaderCallback: (rect) {
-                                                return const LinearGradient(
-                                                  begin: Alignment.topCenter,
-                                                  end: Alignment.bottomCenter,
-                                                  colors: [
-                                                    Color.fromRGBO(
-                                                        0, 57, 149, 1),
-                                                    Color.fromRGBO(
-                                                        0, 41, 161, 1),
-                                                  ],
-                                                ).createShader(Rect.fromLTRB(
-                                                    10,
-                                                    0,
-                                                    rect.width,
-                                                    rect.height));
-                                              },
-                                              blendMode: BlendMode.dstOver,
-                                              child: AspectRatio(
-                                                aspectRatio: 2 / 1,
-                                                child: Image.network(
-                                                  controller.bannerImages[index]
-                                                          [
-                                                          "frontSliderImagePath"] +
-                                                      controller.bannerImages[
-                                                              index]
-                                                          ["frontSliderImage"],
-                                                  fit: BoxFit.cover,
-                                                  colorBlendMode:
-                                                      BlendMode.dstATop,
-                                                ),
-                                              ),
-                                            ),
-                                            // Positioned(
-                                            //   bottom: 12.h,
-                                            //   left: 10.w,
-                                            //   right: 0.0,
-                                            //   child: Column(
-                                            //     crossAxisAlignment: CrossAxisAlignment.start,
-                                            //     children: [
-                                            //       Text('FRIDAY AUG 24, 9PM',
-                                            //           style: GoogleFonts.inter(
-                                            //             color: AppTheme.whiteBackgroundColor,
-                                            //             fontSize: 12,
-                                            //           )),
-                                            //       Text('Brightlight Music Festival',
-                                            //           style: GoogleFonts.inter(
-                                            //             color: AppTheme.whiteBackgroundColor,
-                                            //             fontSize: 22,
-                                            //           )),
-                                            //       Row(
-                                            //         children: [
-                                            //           SvgPicture.asset("assets/icons/location.svg",
-                                            //               fit: BoxFit.scaleDown),
-                                            //           Text(' Singapore Stadium',
-                                            //               style: GoogleFonts.inter(
-                                            //                 color: AppTheme.whiteBackgroundColor,
-                                            //                 fontSize: 12,
-                                            //               )),
-                                            //           SizedBox(
-                                            //             width: 10.w,
-                                            //           ),
-                                            //           SvgPicture.asset("assets/icons/ticketer.svg",
-                                            //               fit: BoxFit.scaleDown),
-                                            //           Text('€40 - €90',
-                                            //               style: GoogleFonts.inter(
-                                            //                 color: AppTheme.whiteBackgroundColor,
-                                            //                 fontSize: 12,
-                                            //               )),
-                                            //         ],
-                                            //       ),
-                                            //     ],
-                                            //   ),
-                                            // ),
-                                          ],
-                                        );
-                                      },
-                                      options: CarouselOptions(
-                                        //  height: getProportionateScreenHeight(300),
-                                        aspectRatio: 2 / 1,
-                                        viewportFraction: 1,
-                                        initialPage: 0,
-                                        onPageChanged: (index, reason) {
-                                          setState(() {
-                                            _current = index;
-                                          });
-                                        },
-                                        enableInfiniteScroll: true,
-                                        reverse: false,
-                                        autoPlay: true,
-                                        autoPlayInterval: Duration(seconds: 3),
-                                        autoPlayAnimationDuration:
-                                            Duration(milliseconds: 800),
-                                        autoPlayCurve: Curves.fastOutSlowIn,
-                                        enlargeCenterPage: true,
-                                        // onPageChanged: pageController,
-                                        scrollDirection: Axis.horizontal,
-                                      )),
-                                  Positioned.fill(
-                                    bottom: 5.h,
-                                    child: Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                        child: DotsIndicator(
-                                          dotsCount:
-                                              controller.bannerImages.length,
-                                          position: _current,
-                                          decorator: DotsDecorator(
-                                            size: const Size.square(9.0),
-                                            activeColor:
-                                                AppTheme.whiteBackgroundColor,
-                                            activeSize: const Size(18.0, 9.0),
-                                            activeShape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5.0)),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            SizedBox(
-                              height: 12,
-                            ),
+                            // if (controller.bannerImages.isNotEmpty)
+                            //   Stack(
+                            //     children: [
+                            //       CarouselSlider.builder(
+                            //           itemCount: controller.bannerImages.length,
+                            //           itemBuilder: (context, index, realIndex) {
+                            //             return Stack(
+                            //               children: <Widget>[
+                            //                 ShaderMask(
+                            //                   shaderCallback: (rect) {
+                            //                     return const LinearGradient(
+                            //                       begin: Alignment.topCenter,
+                            //                       end: Alignment.bottomCenter,
+                            //                       colors: [
+                            //                         Color.fromRGBO(
+                            //                             0, 57, 149, 1),
+                            //                         Color.fromRGBO(
+                            //                             0, 41, 161, 1),
+                            //                       ],
+                            //                     ).createShader(Rect.fromLTRB(
+                            //                         10,
+                            //                         0,
+                            //                         rect.width,
+                            //                         rect.height));
+                            //                   },
+                            //                   blendMode: BlendMode.dstOver,
+                            //                   child: AspectRatio(
+                            //                     aspectRatio: 2 / 1,
+                            //                     child: Image.network(
+                            //                       controller.bannerImages[index]
+                            //                               [
+                            //                               "frontSliderImagePath"] +
+                            //                           controller.bannerImages[
+                            //                                   index]
+                            //                               ["frontSliderImage"],
+                            //                       fit: BoxFit.cover,
+                            //                       colorBlendMode:
+                            //                           BlendMode.dstATop,
+                            //                     ),
+                            //                   ),
+                            //                 ),
+                            //                 // Positioned(
+                            //                 //   bottom: 12.h,
+                            //                 //   left: 10.w,
+                            //                 //   right: 0.0,
+                            //                 //   child: Column(
+                            //                 //     crossAxisAlignment: CrossAxisAlignment.start,
+                            //                 //     children: [
+                            //                 //       Text('FRIDAY AUG 24, 9PM',
+                            //                 //           style: GoogleFonts.inter(
+                            //                 //             color: AppTheme.whiteBackgroundColor,
+                            //                 //             fontSize: 12,
+                            //                 //           )),
+                            //                 //       Text('Brightlight Music Festival',
+                            //                 //           style: GoogleFonts.inter(
+                            //                 //             color: AppTheme.whiteBackgroundColor,
+                            //                 //             fontSize: 22,
+                            //                 //           )),
+                            //                 //       Row(
+                            //                 //         children: [
+                            //                 //           SvgPicture.asset("assets/icons/location.svg",
+                            //                 //               fit: BoxFit.scaleDown),
+                            //                 //           Text(' Singapore Stadium',
+                            //                 //               style: GoogleFonts.inter(
+                            //                 //                 color: AppTheme.whiteBackgroundColor,
+                            //                 //                 fontSize: 12,
+                            //                 //               )),
+                            //                 //           SizedBox(
+                            //                 //             width: 10.w,
+                            //                 //           ),
+                            //                 //           SvgPicture.asset("assets/icons/ticketer.svg",
+                            //                 //               fit: BoxFit.scaleDown),
+                            //                 //           Text('€40 - €90',
+                            //                 //               style: GoogleFonts.inter(
+                            //                 //                 color: AppTheme.whiteBackgroundColor,
+                            //                 //                 fontSize: 12,
+                            //                 //               )),
+                            //                 //         ],
+                            //                 //       ),
+                            //                 //     ],
+                            //                 //   ),
+                            //                 // ),
+                            //               ],
+                            //             );
+                            //           },
+                            //           options: CarouselOptions(
+                            //             //  height: getProportionateScreenHeight(300),
+                            //             aspectRatio: 2 / 1,
+                            //             viewportFraction: 1,
+                            //             initialPage: 0,
+                            //             onPageChanged: (index, reason) {
+                            //               setState(() {
+                            //                 _current = index;
+                            //               });
+                            //             },
+                            //             enableInfiniteScroll: true,
+                            //             reverse: false,
+                            //             autoPlay: true,
+                            //             autoPlayInterval: Duration(seconds: 3),
+                            //             autoPlayAnimationDuration:
+                            //                 Duration(milliseconds: 800),
+                            //             autoPlayCurve: Curves.fastOutSlowIn,
+                            //             enlargeCenterPage: true,
+                            //             // onPageChanged: pageController,
+                            //             scrollDirection: Axis.horizontal,
+                            //           )),
+                            //       Positioned.fill(
+                            //         bottom: 5.h,
+                            //         child: Align(
+                            //           alignment: Alignment.bottomCenter,
+                            //           child: Container(
+                            //             child: DotsIndicator(
+                            //               dotsCount:
+                            //                   controller.bannerImages.length,
+                            //               position: _current,
+                            //               decorator: DotsDecorator(
+                            //                 size: const Size.square(9.0),
+                            //                 activeColor:
+                            //                     AppTheme.whiteBackgroundColor,
+                            //                 activeSize: const Size(18.0, 9.0),
+                            //                 activeShape: RoundedRectangleBorder(
+                            //                     borderRadius:
+                            //                         BorderRadius.circular(5.0)),
+                            //               ),
+                            //             ),
+                            //           ),
+                            //         ),
+                            //       )
+                            //     ],
+                            //   ),
+                            // SizedBox(
+                            //   height: 12,
+                            // ),
                             Padding(
                               padding: EdgeInsets.symmetric(
                                   horizontal: 12, vertical: 10),
